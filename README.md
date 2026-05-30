@@ -18,7 +18,6 @@ Application de chat en temps réel en architecture **client–serveur**, dévelo
 |---|---|
 | `gcc` | Compilateur C (GCC 9+ recommandé) |
 | `pthread` | Bibliothèque POSIX threads (incluse dans glibc) |
-| `make` _(optionnel)_ | Pour utiliser le Makefile |
 
 Sur **Ubuntu/Debian** :
 ```bash
@@ -190,7 +189,5 @@ Un thread secondaire écoute les messages entrants en continu. Lorsqu'un message
 | Commande | Description |
 |---|---|
 | `/quit` | Se déconnecter proprement du serveur |
-| `/msg <pseudo> <texte>` | Envoyer un message privé à un utilisateur |
-| `/users` | Afficher la liste des utilisateurs connectés |
 
 > **Note :** Le texte saisi sans commande est diffusé à tous les participants (mode salon général).
