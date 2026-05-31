@@ -104,7 +104,6 @@ $ ./chat_client 127.0.0.1 5555
 Enter your username: Said
 *** Kamal joined the chat ***
 [Kamal]: Bonjour tout le monde !
-You: /msg Kamal Salut, comment ça va ?
 You: /quit
 ```
 
@@ -123,9 +122,7 @@ Tous les messages sont transmis en **texte brut UTF-8**, terminés par `\n`.
 |---|---|---|
 | Enregistrement pseudo | `<username>\n` | `Kamal\n` |
 | Message public | `<texte>\n` | `Bonjour tout le monde !\n` |
-| Message privé | `/msg <pseudo> <texte>\n` | `/msg Said Salut !\n` |
 | Quitter | `/quit\n` | `/quit\n` |
-| Lister les utilisateurs | `/users\n` | `/users\n` |
 
 ### Messages système émis par le serveur
 
@@ -135,7 +132,6 @@ Tous les messages sont transmis en **texte brut UTF-8**, terminés par `\n`.
 | Départ d'un utilisateur | `*** <pseudo> left the chat ***` |
 | Pseudo déjà pris | `ERROR: Username already taken. Disconnecting...` |
 | Message public reçu | `[<pseudo>]: <texte>` |
-| Message privé reçu | `[PM from <pseudo>]: <texte>` |
 
 ### Séquence de connexion
 
