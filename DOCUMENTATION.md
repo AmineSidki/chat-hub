@@ -85,7 +85,6 @@ Si le pseudo est déjà pris :
 | Message public (salon général) | `<texte>\n` | `Bonjour tout le monde !\n` |
 | Message privé | `/msg <pseudo> <texte>\n` | `/msg Said Salut !\n` |
 | Déconnexion propre | `/quit\n` | `/quit\n` |
-| Liste des utilisateurs | `/users\n` | `/users\n` |
 
 #### Messages émis par le serveur → clients
 
@@ -95,7 +94,6 @@ Si le pseudo est déjà pris :
 | Départ d'un utilisateur | `\n*** <pseudo> left the chat ***\n` |
 | Pseudo déjà pris | `ERROR: Username already taken. Disconnecting...\n` |
 | Message public | `[<pseudo>]: <texte>\n` |
-| Message privé reçu | `[PM from <pseudo>]: <texte>\n` |
 
 ---
 
@@ -114,23 +112,10 @@ Client 1 (Kamal)                  Serveur                  Client 2 (Said)
 
 ---
 
-### 4. Séquence d'un message privé
-
-```
-Client 1 (Kamal)                  Serveur                  Client 2 (Said)
-       │                              │                           │
-       │── "/msg Said Salut !\n" ─────►│                           │
-       │                              │  parse /msg               │
-       │                              │  → trouve Said dans list  │
-       │                              │──────────────────────────►│
-       │                              │  "[PM from Kamal]: Salut !"│
-       │                              │                           │
-       │    (les autres clients ne reçoivent rien)                │
-```
 
 ---
 
-### 5. Séquence de déconnexion
+### 4. Séquence de déconnexion
 
 ```
 Client (Said)                     Serveur                  Autres clients
